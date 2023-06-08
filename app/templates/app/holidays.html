@@ -1,0 +1,59 @@
+{% extends 'app/base.html' %} 
+{% load static %}
+{% block content %} 
+<div class="holidays">
+    {% for item in data %}
+    <div class="signboard outer">
+        
+        <div class="signboard front inner anim04c">
+            <li class="year anim04c">
+                <span>{{item.holiday.two}}</span>
+            </li>
+            <ul class="calendarMain anim04c">
+                <li class="month anim04c">
+                    <span>{{item.month}}</span>
+                </li>
+                <li class="date anim04c">
+                    <span>{{item.day}}</span>
+                </li>
+                <li class="day anim04c">
+                    <span>{{item.year}}</span>
+                </li>
+            </ul>
+            <li class="clock minute anim04c">
+                <span>{{item.avg_energy}}</span>
+            </li>
+            <li class="calendarNormal date2 anim04c">
+                avg_energy
+            </li>
+        </div>
+        
+
+        <div class="signboard left inner anim04c">
+          <li class="year anim04c">
+                <span>{{item.holiday.one}}</span>
+          </li>
+            <li class="clock hour anim04c">
+                <span>{{item.usual_average}}</span>
+            </li>
+            <li class="calendarNormal day2 anim04c">
+                <span>usual_average</span>
+            </li>
+        </div>
+        <div class="signboard right inner anim04c">
+          <li class="year anim04c">
+                <span>{{item.holiday.three}}</span>
+          </li>
+            <li class="clock second anim04c">
+                <span>{{item.percentage_dif}}%</span>
+            </li>
+            <li class="calendarNormal month2 anim04c">
+                <span>percentage_dif</span>
+            </li>
+        </div>
+    </div>   
+    {% endfor %}
+    
+</div>
+    
+{% endblock %}

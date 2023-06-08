@@ -1,0 +1,30 @@
+{% extends 'app/base.html' %} 
+{% load static %}
+{% block content %}
+    <body>
+        <div class="table-title">
+            <h3>Data Table</h3>
+        </div>
+        <div class="table-container">
+            <table class="table-fill">
+                <thead>
+                    <tr>
+                        <th class="text-left">Season</th>
+                        <th class="text-left">Average Usage</th>
+                        <th class="text-left">Record Max</th>
+                        <th class="text-left">Record Low</th>
+                    </tr>
+                </thead>
+                <tbody class="table-hover">
+                        <tr>
+                            <td class="text-left">{{season}}</td>
+                            <td class="text-left">{{average_usage}}</td>
+                            <td class="text-left">{{record_max}}</td>
+                            <td class="text-left">{{record_low}}</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        
+      </body>
+{% endblock %}
